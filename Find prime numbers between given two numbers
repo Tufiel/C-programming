@@ -1,0 +1,27 @@
+/*Find prime numbers between given two numbers*/
+main()
+{int f,l,i,j,s=1;
+printf("Enter first number:");
+scanf("%d",&f);
+printf("Enter last number:");
+scanf("%d",&l);
+i=f;
+while(i>=f&&i<=l)
+{
+for(j=2;j<i;j++)
+{s=i%j;
+if(s==0)
+break;}
+if(s==1)
+printf("%d ,",i);
+
+
+
+
+i++;
+}
+
+
+
+
+}
