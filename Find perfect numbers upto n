@@ -1,0 +1,21 @@
+/*Find perfect numbers upto n
+perfect number means sum of its divisions is equal to that number
+example divisions of 6 are 1+2+3=6*/
+main()
+{int j=1,n,i=1,r,s=0;
+printf("Enter a number:");
+scanf("%d",&n);
+while(j<=n)
+{s=0;
+i=1;
+while(i<j)
+{r=j%i;
+if(r==0)
+s+=i;
+i++;}
+if(s==j)
+printf("%d ,",j);
+j++;
+}
+printf("is/are perfect numbers between 1 and %d",n);
+}
