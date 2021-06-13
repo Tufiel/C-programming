@@ -1,0 +1,61 @@
+
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+#include<stdlib>
+main()
+{char dn,z='M';
+    int t,n,gd=DETECT,gm;
+static int s,m,h;
+
+initgraph(&gd,&gm,"");
+closegraph();
+printf("\n1.Clock\n2.change settings\n3.Turn off:\n");
+scanf("%d",&n);
+
+if(n==1)
+{while(1)start:{
+    if(dn==NULL)
+        dn='A';
+    if(h==NULL)
+        h=1;
+    if(m==NULL)
+        m=1;
+        for(s=0;s<60;s++)
+        {delay(100);
+system("cls");
+if(m<59&&s==59)
+{m++;}
+if(h!=12&&m==59&&s==59)
+{m=0;h++;s=0;}
+if(h==12&&m==59&&s==59)
+    {h=1;m=0;s=0;}
+    for(n=0;n<12;n++)
+        printf("\n\t\t\t\t\t");
+printf("%d h:",h);
+    printf("%d m :",m);
+printf("%d s %c%c ",s,dn,z);
+
+}
+
+}}
+else if(n==2){
+printf("hour:");
+scanf("%d",&h);
+printf("Minute:");
+scanf("%d",&m);
+printf("\n1.PM\n2.AM:\n");
+scanf("%d",&n);
+
+if(n==1)
+    dn='P';
+else if(n==2)
+    dn='A';
+    goto start;}
+
+else if(n==3){
+printf("@Tufail.......Thanks for using");
+    exit(1);}
+if(n!=1&&n!=2&&n!=3)
+printf("invalid input");
+}
